@@ -30,7 +30,7 @@ class Fade extends Component<Props, State> {
   componentWillReceiveProps({ visible }: { visible: boolean }) {
     Animated.timing(this.visibility, {
       toValue: visible ? 1 : 0,
-      duration: 150
+      duration: 200
     }).start(() => !visible && this.setState({ visible }));
 
     if (visible) this.setState({ visible });
