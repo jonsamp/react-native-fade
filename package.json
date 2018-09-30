@@ -1,0 +1,32 @@
+{
+  "name": "react-native-fade",
+  "version": "1.0.0",
+  "description": "Fade components in and out in React Native with just a boolean.",
+  "main": "index.js",
+  "keywords": [
+    "fade",
+    "react native",
+    "component"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ide/react-native-fade.git"
+  },
+  "author": "Jon Samp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonsamp/react-native-fade/issues"
+  },
+  "homepage": "https://github.com/ide/react-native-fade",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@babel/preset-flow": "7.0.0",
+    "flow-bin": "0.75.0"
+  }
+}
