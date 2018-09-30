@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ide/react-native-fade.git"
+    "url": "https://github.com/jonsamp/react-native-fade.git"
   },
   "author": "Jon Samp",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jonsamp/react-native-fade/issues"
   },
-  "homepage": "https://github.com/ide/react-native-fade",
+  "homepage": "https://github.com/jonsamp/react-native-fade",
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
