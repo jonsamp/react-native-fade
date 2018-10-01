@@ -1,6 +1,6 @@
 {
   "name": "react-native-fade",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fade components in and out in React Native with just a boolean.",
   "main": "index.js",
   "keywords": [
