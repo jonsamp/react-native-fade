@@ -23,10 +23,7 @@
   "homepage": "https://github.com/jonsamp/react-native-fade",
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
-  },
-  "devDependencies": {
-    "@babel/preset-flow": "7.0.0",
-    "flow-bin": "0.75.0"
+    "react-native": "*",
+    "prop-types": "*"
   }
 }

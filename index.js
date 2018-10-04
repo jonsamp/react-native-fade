@@ -1,22 +1,16 @@
-// @flow
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Animated } from "react-native";
 
-type Props = {
-  visible: boolean,
-  style?: any,
-  children?: any,
-  direction?: "up" | "down"
-};
+class Fade extends Component {
+  static propTypes = {
+    visible: PropTypes.boolean,
+    style: PropTypes.any,
+    children: PropTypes.any,
+    direction: PropTypes.string
+  };
 
-type State = {
-  visible: boolean
-};
-
-class Fade extends Component<Props, State> {
-  visibility: any;
-
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
     this.state = {
       visible: props.visible
@@ -27,7 +21,7 @@ class Fade extends Component<Props, State> {
     this.visibility = new Animated.Value(0);
   }
 
-  componentWillReceiveProps({ visible }: { visible: boolean }) {
+  componentWillReceiveProps({ visible }) {
     Animated.timing(this.visibility, {
       toValue: visible ? 1 : 0,
       duration: 200
