@@ -4,7 +4,7 @@ import { Animated } from "react-native";
 
 class Fade extends Component {
   static propTypes = {
-    visible: PropTypes.boolean,
+    visible: PropTypes.bool,
     style: PropTypes.any,
     children: PropTypes.any,
     direction: PropTypes.string
