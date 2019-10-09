@@ -3,11 +3,16 @@ import PropTypes from "prop-types";
 import { Animated } from "react-native";
 
 class Fade extends Component {
+  static defaultProps = {
+    duration: 200
+  };
+
   static propTypes = {
     visible: PropTypes.bool,
     style: PropTypes.any,
     children: PropTypes.any,
-    direction: PropTypes.string
+    direction: PropTypes.string,
+    duration: PropTypes.number
   };
 
   constructor(props) {
@@ -24,7 +29,7 @@ class Fade extends Component {
   componentWillReceiveProps({ visible }) {
     Animated.timing(this.visibility, {
       toValue: visible ? 1 : 0,
-      duration: 200
+      duration: this.props.duration
     }).start(() => !visible && this.setState({ visible }));
 
     if (visible) this.setState({ visible });
