@@ -62,3 +62,4 @@ class Notification extends Component {
 | `visible`   | true      | boolean                      | Pretty-print the output.                                                                                                                        |
 | `direction` | false     | string                       | Can be `"up"` or `"down"`. When the child component fades in there's an optional subtle translation that you can apply with `"up"` or `"down"`. |
 | `style`     | false     | React Native Style or Object | Applies style a view around the faded child components                                                                                          |
+| `duration`   | false      | number                     | Animation duration
