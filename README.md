@@ -2,7 +2,7 @@
 
 A wrapper component to fade its children in and out based on a boolean.
 
-![fade](https://user-images.githubusercontent.com/6455018/46253439-f7920a00-c449-11e8-8637-17a17b764449.gif)
+![Fade example gif](https://user-images.githubusercontent.com/6455018/71566445-b0982780-2a85-11ea-96f9-2519dc33930d.gif)
 
 ## Installation
 
@@ -20,45 +20,41 @@ Then, import with:
 import Fade from "react-native-fade";
 ```
 
+Note:
+You may also need to install `react-native-reanimated`.
+
 ## Usage
 
 Example:
 
 ```js
-import React, { Component } from "react";
-import { View, Text, Button } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, Text, View, Button } from "react-native";
 import Fade from "react-native-fade";
 
-class Notification extends Component {
-  state = {
-    isGeeseSeason: false
-  };
-
-  toggleGeeseSeason = () =>
-    this.setState(prevState => ({ isGeeseSeason: !prevState.isGeeseSeason }));
-
-  render() {
-    return (
-      <View>
-        <Button
-          onPress={this.toggleGeeseSeason}
-          title={
-            !this.state.isGeeseSeason ? "I saw a goose!" : "Where the geese?"
-          }
-        />
-        <Fade visible={this.state.isGeeseSeason} direction="up">
-          <Text>The geese are coming!</Text>
-        </Fade>
-      </View>
-    );
-  }
+export default function App() {
+  const [visible, setVisible] = useState(false);
+  return (
+    <View>
+      <Button
+        onPress={() => setVisible(!visible)}
+        title={visible ? "Hide text" : "Show text"}
+      />
+      <Fade visible={visible} direction="up">
+        <Text>I fade in</Text>
+      </Fade>
+    </View>
+  );
 }
 ```
+
+You can see a full example app inside the /example folder!
 
 ## Props
 
 | Prop        | Required? | Type                         | Description                                                                                                                                     |
 | ----------- | --------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `visible`   | true      | boolean                      | Pretty-print the output.                                                                                                                        |
+| `visible`   | false     | boolean                      | Show the children of `<Fade>`.                                                                                                                  |
 | `direction` | false     | string                       | Can be `"up"` or `"down"`. When the child component fades in there's an optional subtle translation that you can apply with `"up"` or `"down"`. |
+| `duration`  | false     | number                       | The amount of time in milliseconds the fade transition should take.                                                                             |
 | `style`     | false     | React Native Style or Object | Applies style a view around the faded child components                                                                                          |
