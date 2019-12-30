@@ -4086,9 +4086,9 @@ react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
-react-native-fade@../react-native-fade-2.0.0-alpha.tgz:
-  version "2.0.0-alpha"
-  resolved "../react-native-fade-2.0.0-alpha.tgz#b79f1ecb18ef5a8400252837f5fe741ce3e0fad7"
+react-native-fade@../react-native-fade-2.0.0.tgz:
+  version "2.0.0"
+  resolved "../react-native-fade-2.0.0.tgz#847339e117ccb6aadc334d427ba59ef46af52853"
 
 react-native-reanimated@1.4.0:
   version "1.4.0"
