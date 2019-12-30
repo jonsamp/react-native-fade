@@ -1,5 +1,7 @@
 # react-native-fade
 
+[![runs with expo](https://img.shields.io/badge/Runs%20with%20Expo-000.svg?style=flat&logo=EXPO&labelColor=ffffff&logoColor=000)](https://github.com/expo/expo)
+
 A wrapper component to fade its children in and out based on a boolean.
 
 ![Fade example gif](https://user-images.githubusercontent.com/6455018/71566445-b0982780-2a85-11ea-96f9-2519dc33930d.gif)
