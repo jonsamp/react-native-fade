@@ -1,6 +1,6 @@
 {
   "name": "react-native-fade",
-  "version": "0.1.0",
+  "version": "2.0.2",
   "description": "Fade components in and out in React Native with just a boolean.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -77,7 +77,6 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "yarn lint && yarn typescript"
     }
   },
