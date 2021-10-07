@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-// import Fade from 'react-native-fade';
-import Fade from './Fade';
+import Fade from 'react-native-fade';
+// import Fade from './Fade';
 
 export default function App() {
   const [on, setOn] = useState(false);
