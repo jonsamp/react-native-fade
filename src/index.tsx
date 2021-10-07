@@ -1,18 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import type { ViewStyle } from 'react-native';
-import Animated, { Easing } from 'react-native-reanimated';
+import type { FadeProps } from './Fade';
+import Animated, { EasingNode } from 'react-native-reanimated';
 
 const { Value, timing } = Animated;
-
-type FadeProps = {
-  visible?: boolean;
-  style?: ViewStyle;
-  children?: any;
-  direction?: 'up' | 'down';
-  duration?: number;
-};
-
-const opacityValue = new Value(0);
+const opacityValue: any = new Value(0);
 const translationValue = new Value(0);
 
 function Fade(props: FadeProps) {
@@ -20,7 +11,7 @@ function Fade(props: FadeProps) {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    opacityValue.setValue(visible ? 1 : (0 as any));
+    opacityValue.setValue(visible ? 1 : 0);
     setIsReady(true);
   }, []);
 
@@ -28,7 +19,7 @@ function Fade(props: FadeProps) {
     if (!isReady) return;
     const animationConfig = {
       duration: duration,
-      easing: Easing.linear,
+      easing: EasingNode.linear,
     };
     const opacityConfig = {
       ...animationConfig,
@@ -46,13 +37,11 @@ function Fade(props: FadeProps) {
 
   return (
     <Animated.View
-      style={
-        {
-          opacity: opacityValue,
-          transform: [{ translateY: translationValue }],
-          ...style,
-        } as any
-      }
+      style={{
+        opacity: opacityValue,
+        transform: [{ translateY: translationValue }],
+        ...style,
+      }}
     >
       {children}
     </Animated.View>
