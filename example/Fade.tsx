@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import type { FadeProps } from './Fade';
 import Animated, {
   Easing,
   withTiming,
@@ -7,7 +6,7 @@ import Animated, {
   useAnimatedStyle,
 } from 'react-native-reanimated';
 
-function Fade(props: FadeProps) {
+function Fade(props: any) {
   const { style, children, direction, visible, duration = 200 } = props;
 
   function getInitialTranslationValue() {
