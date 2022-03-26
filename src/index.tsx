@@ -20,7 +20,7 @@ function Fade(props: FadeProps) {
     }
   }
 
-  const opacityValue = useSharedValue(1);
+  const opacityValue = useSharedValue(visible ? 1 : 0);
   const translationValue = useSharedValue(getInitialTranslationValue());
 
   const opacityStyle = useAnimatedStyle(() => {
